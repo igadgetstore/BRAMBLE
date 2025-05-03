@@ -1,1 +1,1 @@
-from quiz_maker import extract_text_from_file, generate_quiz_and_answers, generate_notes, generate_mnemonics
+from SourceCode.quiz_maker import extract_text_from_file, generate_quiz_and_answers, generate_notes, generate_mnemonics

@@ -3,6 +3,7 @@ import tkinter as tk
 from tkinter import filedialog, messagebox
 from tkinter import ttk
 import os
+from quotes import get_motivational_quote
 
 class StudyApp(tk.Tk):
     def __init__(self):
@@ -71,6 +72,11 @@ class MainPage(tk.Frame):
         # Title
         title_label = tk.Label(self, text="Study Helper App", font=("Arial", 24, "bold"), bg="#f0f0f0")
         title_label.pack(pady=40)
+
+        quote = get_motivational_quote()
+        self.quote_label = tk.Label(self, text=quote, font=("Arial", 12, "italic"), 
+                                    bg="#f0f0f0", wraplength=700, justify="center")
+        self.quote_label.pack(pady=10)
         
         # Create a frame for the two main buttons
         buttons_frame = tk.Frame(self, bg="#f0f0f0")
